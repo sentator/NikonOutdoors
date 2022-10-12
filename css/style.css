@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "GT Eesti Pro Display";
+    font-weight: 300;
+}
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1380px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.title {
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.65px;
+    font-size: 120px;
+}
+
+/* header */
+
+.header {
+    background-image: url(../images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    padding: 65px 65px 30px;
+    border-bottom: 14px solid #f6dc34;
+}
+.header__inner {
+    display: flex;
+
+}
+.header__content {
+    margin-top: 80px;
+    flex: 1 1 auto;
+    text-align: center;
+    transform: translateX(-60px);
+}
+.header__image {
+    max-width: 354px;
+    width: 100%;
+}
+.header__text {
+    font-family: "GT Eesti Pro Display";
+    font-weight: 700;
+    text-align: center;
+    font-size: 75px;
+    line-height: 80%;
+}
+.logo {
+    align-self: flex-start;
+}
+
+/* About */
+.about {
+    padding-top: 150px;
+}
+.about__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.about__top::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 800px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/about-bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transform: translateX(120px);
+}
+.about__content {
+    max-width: 740px;
+}
+.about__title {
+    margin-bottom: 55px;
+}
+.about__text {
+    font-weight: 300;
+    font-size: 29px;
+    color: #050505;
+    margin-bottom: 50px;
+}
+.about__text span {
+    font-weight: 700;
+}
+.about__media {
+    flex: 0 0 590px;
+    align-self: flex-end;
+    padding-bottom: 20px;
+}
+.about__image {
+    width: 100%;
+}
+.about__bottom {
+    background-color: #f2f2f2;
+}
+.about__bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px 0;
+}
+.about__download {
+    position: relative;
+    padding-right: 100px;
+    font-size: 60px;
+    color: #000000;
+    line-height: 100%;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.about__download::after {
+    position: absolute;
+    content: '';
+    bottom: 115%;
+    right: 0;
+    width: 107px;
+    height: 62px;
+    background-image: url(../images/bird.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 50px;
+}
+.about__item {
+    list-style: none;
+}
+.about__link {
+    display: inline-block;
+    transition: all .3s;
+}
+.about__link:hover {
+    transform: scale(1.05);
+}
+.about__link img{
+    pointer-events: none;
+}
+
+/* Media queries */
+@media(max-width: 1250px) {
+    .about__title {
+        font-size: 100px;
+    }
+    .about__text {
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+    .about__media {
+        flex: 0 0 460px;
+    }
+    .about__list {
+        justify-content: center;
+    }
+    .about__link.about__link--appstore img{
+        max-width: 240px;
+    }
+    .about__link.about__link--googleplay img{
+        max-width: 272px;
+    }
+}
+@media(max-width: 992px) {
+    .about {
+        padding-top: 60px;
+    }
+    .about__title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .about__top {
+        flex-direction: column;
+    }
+    .about__top::after {
+        transform: translateX(0);
+        right: unset;
+        background-position: top center;
+        max-width: unset;
+        margin-left: -15px;
+        margin-right: -15px;
+        min-width: 100vw;
+    }
+    .about__content {
+        max-width: unset;
+    }
+    .about__media {
+        flex: 1 1 auto;
+        align-self: center;
+        max-width: 350px;
+    }
+    .about__bottom-inner {
+        flex-direction: column;
+    }
+    .about__download {
+        padding-left: 100px;
+    }
+    .about__list {
+        gap: 10px 30px;
+    }
+}
+@media(max-width: 768px) {
+    .title {
+        font-size: 85px;
+    }
+    .header {
+        background-image: url(../images/header-bg-mobile.jpg);
+    }
+    .header__inner {
+        flex-direction: column;
+    }
+    .header__content {
+        margin-top: 50px;
+        flex: 1 1 auto;
+        text-align: center;
+        transform: translateX(0);
+    }
+    .about__text {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .about__media {
+        padding-bottom: 0;
+    }
+    .about__download {
+        font-size: 45px;
+        padding: 0 75px;
+    }
+    .about__download::after{
+        width: 75px;
+        height: 43px;
+    }
+    .about__list {
+        gap: 10px 20px;
+    }
+    .about__link.about__link--appstore img{
+        max-width: 200px;
+    }
+    .about__link.about__link--googleplay img{
+        max-width: 225px;
+    }
+}
+@media(max-width: 500px) {
+    .container {
+        padding: 0 10px;
+    }
+    .title {
+        font-size: 60px;
+    }
+    .header {
+        padding: 30px;
+    }
+    .header__text {
+        font-size: 60px;
+    }
+    .about__top::after {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .about__download {
+        font-size: 30px;
+        padding: 0 50px;
+    }
+    .about__download::after{
+        width: 50px;
+        height: 29px;
+    }
+    .about__link.about__link--appstore img{
+        max-width: 150px;
+    }
+    .about__link.about__link--googleplay img{
+        max-width: 170px;
+    }
+}
+@media(max-width: 400px) {
+    .about__list {
+        gap: 10px;
+    }
+    .about__link.about__link--appstore img{
+        max-width: 120px;
+    }
+    .about__link.about__link--googleplay img{
+        max-width: 136px;
+    }  
+}
+
